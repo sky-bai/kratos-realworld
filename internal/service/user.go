@@ -21,5 +21,3 @@ func (r *RealWorldService) Login(context.Context, *v1.LoginRequest) (*v1.UserRep
 func (r *RealWorldService) Register(context.Context, *v1.RegisterRequest) (*v1.UserReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
 }
-
-// 提供http 和 grpc 两种服务

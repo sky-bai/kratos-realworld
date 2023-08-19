@@ -22,6 +22,8 @@ type Greeter struct {
 // 业务逻辑的组装层
 // 有操作数据库的方法
 
+// biz 领域模型层 调data的接口
+
 // GreeterRepo is a Greater repo.
 type GreeterRepo interface {
 	Save(context.Context, *Greeter) (*Greeter, error)
@@ -31,7 +33,7 @@ type GreeterRepo interface {
 	ListAll(context.Context) ([]*Greeter, error)
 }
 
-// GreeterUsecase is a Greeter usecase.
+// RealWorldUsecase is a realworld usecase.
 type RealWorldUsecase struct {
 	repo GreeterRepo
 	log  *log.Helper
